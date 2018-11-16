@@ -1,14 +1,16 @@
 ---
-output: 
- html_notebook: 
-    number_sections: true
 title: "Tópicos en Economía y Negocios usando R"
-subtitle: "Tarea 5"
-author: 
+author:
 - Carolina Gacitúa
 - Emilio Guamán
 - Giovanni Villa
 date: "15 de noviembre de 2018"
+output:
+  html_document:
+    df_print: paged
+  html_notebook:
+    number_sections: yes
+subtitle: Tarea 5
 always_allow_html: yes
 urlcolor: blue
 ---
@@ -72,7 +74,7 @@ df1<-data.frame(apple$date, microsoft$adjusted, apple$adjusted)
 
 A continuación, procedemos a programar una función que nos permita: (i) calcular los retornos, (ii) graficar los retornos y retornos acumulados y (iii) testear normalidad utilizando el test de Jarque-Bera (JB). El estadístico de este test está dado por las siguientes expresiones:
 
-$$ JB = n ( \frac{{skewness}^2}{6} + \frac{(kurtosis - 3)^2}{24})  $$
+$$ JB = n \left( \frac{skewness^2}{6} + \frac{(kurtosis - 3)^2}{24}\right)  $$
 $$ skewness = \frac{ \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^{3}}{(\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^{2})^{3/2}} $$
 $$ kurtosis = \frac{ \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^{4}}{(\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^{2})^{2}} $$
 
